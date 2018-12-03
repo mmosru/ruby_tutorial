@@ -1,5 +1,7 @@
 require 'sinatra'
+require 'date'
 
 get '/' do
-  'hello, world!'
+  dayname = Date::DAYNAMES[Time.now.wday]
+  "hello, world! Happy #{dayname}."
 end
